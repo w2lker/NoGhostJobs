@@ -11,4 +11,5 @@ export type CompanyDTO = {
   employeeCount: number;
   logo: string;
   readings: CompanyReadingDTO[];
+  reliabilityScore: number;
 };
