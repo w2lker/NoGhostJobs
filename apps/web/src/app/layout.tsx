@@ -18,7 +18,7 @@ export default function RootLayout({
         <main className="min-h-screen bg-background">
           {/* Header */}
           <header className="border-b border-gray-300">
-            <div className="container mx-auto py-4">
+            <div className="container mx-auto pt-4">
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <Link href="/" className="hover:opacity-80 transition-opacity">
                   <h1 className="text-2xl font-bold font-mono">NoGhostJobs</h1>

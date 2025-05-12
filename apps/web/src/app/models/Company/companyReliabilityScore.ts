@@ -63,12 +63,3 @@ export const calculateCompanyReliabilityScore = (readings: CompanyReadingDTO[]):
   // Ensure score is between 0 and 100
   return Math.min(Math.max(score, 0), 100);
 };
-
-// Helper function to get reliability level description
-export const getReliabilityLevel = (score: number): string => {
-  if (score < 20) return "Very Reliable";
-  if (score < 40) return "Reliable";
-  if (score < 60) return "Moderately Reliable";
-  if (score < 80) return "Potentially Unreliable";
-  return "Likely Unreliable";
-};

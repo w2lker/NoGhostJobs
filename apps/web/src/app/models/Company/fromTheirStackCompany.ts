@@ -1,6 +1,7 @@
 import { TheirStackCompanyDTO } from "../theirStack";
 import { CompanyDTO } from "./CompanyDTO";
 import { fromTheirStackCompany as fromTheirStackCompanyReading } from "../CompanyReading/fromTheirStackCompany";
+import { calculateCompanyReliabilityScore } from "./companyReliabilityScore";
 
 export const fromTheirStackCompany = (company: TheirStackCompanyDTO): CompanyDTO => {
   return {
@@ -13,6 +14,7 @@ export const fromTheirStackCompany = (company: TheirStackCompanyDTO): CompanyDTO
     countryCode: company.country_code ?? '',
     employeeCount: company.employee_count ?? 0,
     logo: company.logo ?? '',
-    readings: [fromTheirStackCompanyReading(company)]
+    readings: [fromTheirStackCompanyReading(company)],
+    reliabilityScore: calculateCompanyReliabilityScore([fromTheirStackCompanyReading(company)])
   };
 };
