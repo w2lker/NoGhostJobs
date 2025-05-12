@@ -15,7 +15,7 @@ export const CompanyCard = ({ company }: CompanyGridItemProps) => {
         <CardHeader className="relative">
           <ReliabilityScoreBadge
             score={company.reliabilityScore}
-            className="absolute right-4 top-0"
+            className="absolute right-4 top-0 z-10"
           />
           <div className="flex items-center justify-center pt-4">
             <div className="relative h-24 w-24">
