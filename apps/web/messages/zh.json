@@ -1,0 +1,18 @@
+{
+  "company": {
+    "employeeCount": "员工人数",
+    "totalJobs": "职位总数",
+    "openJobs": "开放职位",
+    "openJobs30Days": "开放职位（30天）",
+    "lastUpdated": "最后更新",
+    "logoAlt": "{name}标志"
+  },
+  "LocaleSwitcher": {
+    "en": "英语",
+    "fr": "法语",
+    "es": "西班牙语",
+    "uk": "乌克兰语",
+    "zh": "中文",
+    "pa": "旁遮普语"
+  }
+}

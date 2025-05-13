@@ -1,0 +1,18 @@
+{
+  "company": {
+    "employeeCount": "Número de Empleados",
+    "totalJobs": "Total de Trabajos",
+    "openJobs": "Trabajos Abiertos",
+    "openJobs30Days": "Trabajos Abiertos (30 días)",
+    "lastUpdated": "Última Actualización",
+    "logoAlt": "Logo de {name}"
+  },
+  "LocaleSwitcher": {
+    "en": "Inglés",
+    "fr": "Francés",
+    "es": "Español",
+    "uk": "Ucraniano",
+    "zh": "Chino",
+    "pa": "Punjabi"
+  }
+}

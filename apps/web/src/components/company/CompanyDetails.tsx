@@ -2,6 +2,7 @@ import { CompanyDTO } from "@/app/models/Company";
 import { ReliabilityScoreBadge } from "@/components/company/ReliabilityScoreBadge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { useTranslations } from 'next-intl';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,6 +13,7 @@ type CompanyDetailsProps = {
 export const CompanyDetails = (props: CompanyDetailsProps) => {
   const { company } = props;
   const latestReading = company.readings[company.readings.length - 1];
+  const t = useTranslations('company');
 
   return (
     <Card className="w-full">
@@ -25,7 +27,7 @@ export const CompanyDetails = (props: CompanyDetailsProps) => {
                   <Link href={`https://${company.domain}`} target="_blank">
                     <Image
                       src={company.logo}
-                      alt={`${company.name} logo`}
+                      alt={t('logoAlt', { name: company.name })}
                       fill
                       className="object-contain"
                     />
@@ -33,7 +35,7 @@ export const CompanyDetails = (props: CompanyDetailsProps) => {
                 ) : (
                   <Image
                     src={company.logo}
-                    alt={`${company.name} logo`}
+                    alt={t('logoAlt', { name: company.name })}
                     fill
                     className="object-contain"
                   />
@@ -63,23 +65,23 @@ export const CompanyDetails = (props: CompanyDetailsProps) => {
             <Table>
               <TableBody>
                 <TableRow>
-                  <TableCell>Employee Count</TableCell>
+                  <TableCell>{t('employeeCount')}</TableCell>
                   <TableCell>{latestReading.employeeCount}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Total Jobs</TableCell>
+                  <TableCell>{t('totalJobs')}</TableCell>
                   <TableCell>{latestReading.totalJobsCount}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Open Jobs</TableCell>
+                  <TableCell>{t('openJobs')}</TableCell>
                   <TableCell>{latestReading.jobsOpen}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Jobs Open (30 days)</TableCell>
+                  <TableCell>{t('openJobs30Days')}</TableCell>
                   <TableCell>{latestReading.jobsOpen30Days}</TableCell>
                 </TableRow>
                 <TableRow>
-                  <TableCell>Last Updated</TableCell>
+                  <TableCell>{t('lastUpdated')}</TableCell>
                   <TableCell>{new Date(latestReading.createdAt).toLocaleDateString()}</TableCell>
                 </TableRow>
               </TableBody>
